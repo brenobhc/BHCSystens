@@ -1,0 +1,50 @@
+import re
+
+
+print("Seja bem vindo a BHC.Systems\n\nCadastre-se para conhecer nossos cursos onlines")
+
+for num in range(1,31):
+  input("\nNome:")
+  input("\nSobrenome:")
+  cpf=str(input("\nCPF:"))
+  if re.search("\d{11}", cpf):
+    print("\nNumero de CPF validado com Sucesso !")
+  else:
+    print("\nCPF invalido")
+  input("\nEmail:")
+  input("\nTelefone:")
+  opcao=int(input("\nCaso os dados estiverem corretos digite 1 para continuar, caso não digite 2 para voltar\nEscolha uma opção:"))
+  if opcao == 2 :
+    print("\nCadastre-se novamente")
+  else:
+    input("\nTecle ENTER para continiar")
+    break
+for senha in range(1,61):
+  senha1=(input("\nCrie uma senha:"))
+  senha01=(input("\nConfirme a senha:"))
+  if senha1!=senha01:
+    print("\nAs senhas não considem\n\nTente novamente\n\nVoce tem somente 10 tentativas, essa foi sua ",senha," Tentativa")
+  else:
+    input("\nTecle ENTER para continuar")
+    break 
+
+linguagem=int(input("\nTemos parcerias com diversos cursos de desenvolvimento usando linguagens diferentes\n\nQual lunguegem você deseja estudar ?\n1-Python\n2-JavaScript\n3-HTML\n4-Outras\n5-Pacote Full Stack\n6-Codigo SAP\n7-\nEscola uma opção:")) 
+
+if linguagem==1:
+  print("CONTINUA")
+if linguagem == 1 :
+  print("\nO curso de Python do basico ao avançado R$160,00 sem mensalidades")
+elif linguagem ==2 :
+  print("\nO curso de JavaScript do basico ao avancado R$120,00 sem mensalidades ")
+elif linguagem== 3:
+  print("\nO curso de HTML do básico ao avançado R$170,00 sem mensalidades")
+elif linguagem ==4:
+  print("\nCaso você deseja fazer outra linguagem entre em nosso Site htps//www.BHC.Systems\nAgradecemos seu enteresse ")
+elif linguagem == 5:
+  print("\nO pacote Full stack sai apartir de R$297,00 em 12 vezes")
+elif linguagem == 6:
+  print("\nCodigo SAP do basico ao avançado por apenas R$360,00 sem mensalidades  ")
+else :
+  print("\nDeixe sei email para quando houver novas oportunidades e promocoes ")
+  
+print("\nObrigada por se cadastrar em nosso sistema, verifique se email para dar continuidade em seu curso, e desenvolva juntamente com a BHC.Systems suas novas habilidades em Programação ")
